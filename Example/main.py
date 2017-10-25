@@ -1,7 +1,3 @@
-# KidsCanCode - Game Development with Pygame video series
-# Tile-based game - Part 23
-# Lighting Effect
-# Video link: https://youtu.be/IWm5hi5Yrvk
 import pygame as pg
 import sys
 from random import choice, random
