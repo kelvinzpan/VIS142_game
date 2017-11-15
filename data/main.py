@@ -6,6 +6,8 @@ the tools.Control class.  All modifications should occur in this module
 and in the prepare module.
 """
 
+# WORKS WITH PYTHON 3
+
 from . import prepare, tools
 from .states import splash, menu, demo, game
 

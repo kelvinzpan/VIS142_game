@@ -14,9 +14,13 @@ class Game(tools._State):
         self.next = "SPLASH"
         self.bgm = prepare.MUSIC["Anitek_-_07_-_Contact"]
         self.font = pg.font.Font(prepare.FONTS["Fixedsys500c"], 50)
-        text = ["This is the game.", "Music should be playing",
-                "to demonstrate", "that the intro movie",
-                "has relinquished control", "of the mixer module.", "",
+        text = ["Made by:",
+                "Kelvin (Zi Long) Pan.",
+                "Code based off of:",
+                "Mekire and KidsCanCode.",
+                "Art tiles from:",
+                "\"Whispers of Avalon\".",
+                "",
                 "Press escape to return", "to the splash."]
         self.rendered_text = self.make_text_list(self.font, text,
                                                  pg.Color("white"), 50, 50)
@@ -26,11 +30,11 @@ class Game(tools._State):
         self.blink = False
         self.timer = 0.0
 
-    def startup(self, current_time, persistant):
+    def startup(self, current_time, persistent):
         """Load and play the music on scene start."""
         pg.mixer.music.load(self.bgm)
         pg.mixer.music.play(-1)
-        return tools._State.startup(self, current_time, persistant)
+        return tools._State.startup(self, current_time, persistent)
 
     def cleanup(self):
         """Stop the music when scene is done."""
