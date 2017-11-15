@@ -24,6 +24,7 @@ class Demo(tools._State):
         self.walls = pg.sprite.Group()
         self.mobs = pg.sprite.Group()
         self.bullets = pg.sprite.Group()
+        self.bossBullets = pg.sprite.Group()
 
         self.map = TiledMap(SETTINGS["MAP_1"])
         self.map_img = self.map.make_map()
@@ -45,7 +46,7 @@ class Demo(tools._State):
         self.speakerText = None
         self.nextText = True
         self.currStory = 0
-
+        self.endGame = False
 
     def draw(self, surface):
         """Blit all elements to surface."""
@@ -87,10 +88,44 @@ class Demo(tools._State):
             self.isDialogue = True
 
             # CONTROL MULTIPLE DIALOG HERE
-            if self.currStory == 0:
+            if self.currStory in [0, 7, 8, 11, 12, 13, 14, 15, 16] or self.currStory in range(23, 44):
                 self.nextText = True
             else:
                 self.nextText = False
+
+        # bullets hit mobs
+        hits = pg.sprite.spritecollide(self.boss, self.bullets, True)
+        for hit in hits:
+            hit.kill()
+            if self.boss.isAwake is False:
+                self.boss.isAwake = True
+                self.boss.reqTalks = 26
+                self.currStory = 2
+                self.nextText = True
+            elif self.boss.isAngry is False:
+                self.boss.isAngry = True
+                self.boss.reqTalks = 39
+                self.boss.attackSpeed = 1000.0
+                self.currStory = 3
+                self.nextText = True
+            elif self.boss.isKilling is False:
+                self.boss.isKilling = True
+                self.boss.reqTalks = 52
+                self.boss.attackSpeed = 500.0
+                self.currStory = 4
+                self.nextText = True
+
+        # bossBullets hit player
+        damages = pg.sprite.spritecollide(self.player, self.bossBullets, True)
+        for damage in damages:
+            damage.kill()
+            self.player.health -= 1
+            if self.player.health == SETTINGS["PLAYER_HP"] - 1:
+                self.currStory = 10
+                self.nextText = True
+            elif self.player.health < 1:
+                self.currStory = 5
+                self.nextText = True
 
         self.draw(surface)
 
@@ -99,16 +134,61 @@ class Demo(tools._State):
         if event.type == pg.KEYDOWN:
             if event.key == pg.K_ESCAPE:
                 self.done = True
-            elif event.key == pg.K_k:
-                self.draw_debug = not self.draw_debug
             elif event.key == pg.K_SPACE:
                 if self.isDialogue == True:
-
                     # CONTROL DIRECTION OF STORY HERE DEPENDING ON CURRENT VARIABLE
                     if self.currStory == 0:
                         self.currStory = 1
-
+                    elif self.currStory == 5:
+                        self.done = True
+                    elif self.currStory == 7:
+                        self.currStory = 8
+                    elif self.currStory == 8:
+                        self.currStory = 9
+                    elif self.currStory in range(11, 17):
+                        self.currStory = random.randint(17, 22)
+                    elif self.currStory >= 23:
+                        self.currStory += 1 # Straight progression
+                        if self.currStory > 42: # End game
+                            self.currStory = 43
+                            self.endGame = True
                     self.isDialogue = False
+            elif event.key == pg.K_t and self.player.canTalk:
+                self.player.canTalk = False
+                # print("Required talks left: ", self.boss.reqTalks)
+                if self.player.pos.distance_to(self.boss.pos) < 300:
+                    # PROGRESS THE GAME BY TALKING
+                    if self.boss.reqTalks > 0:
+                        self.boss.reqTalks -= 1
+                        if self.boss.isAwake is False:
+                            # Awaken boss by talking
+                            self.boss.isAwake = True
+                            self.currStory = 7
+                            self.nextText = True
+                        else:
+                            # Boss is still unwilling to talk
+                            self.currStory = random.randint(11, 16)
+                            self.nextText = True
+                    elif self.boss.reqTalks == 0:
+                        # Boss is willing to talk
+                        self.boss.reqTalks -= 1
+                        self.boss.isAngry = False
+                        self.boss.isKilling = False
+                        self.boss.attackSpeed = 2000.0
+
+                        self.currStory = 23
+                        self.nextText = True
+                else:
+                    self.currStory = 6
+                    self.nextText = True
+            elif event.key == pg.K_k:
+                self.draw_debug = not self.draw_debug
+            elif event.key == pg.K_l:
+                print("Lowering required talks for the boss to 1.")
+                self.boss.reqTalks = 1
+            elif event.key == pg.K_RETURN and self.endGame:
+                self.done = True
+
 
     def draw_grid(self):
         for x in range(0, prepare.SCREEN_WIDTH, SETTINGS["TILE_SIZE"]):
@@ -166,6 +246,9 @@ class Player(pg.sprite.Sprite):
         self.vel = vec(0, 0)
         self.pos = vec(x, y)
         self.last_shot = 0
+        self.health = SETTINGS["PLAYER_HP"]
+        self.canTalk = True
+        self.talkTimer = 0.0
 
     def get_keys(self):
         if self.game.nextText == False:
@@ -206,6 +289,11 @@ class Player(pg.sprite.Sprite):
         collide_with_walls(self, self.game.mobs, 'y')
         self.rect.center = self.hit_rect.center
 
+        # Prevent talk spam
+        if self.game.current_time - self.talkTimer > 2000.0:
+            self.canTalk = True
+            self.talkTimer = self.game.current_time
+
 
 class Bullet(pg.sprite.Sprite):
     def __init__(self, game, pos, dir):
@@ -224,8 +312,25 @@ class Bullet(pg.sprite.Sprite):
         self.rect.center = self.pos
         if pg.sprite.spritecollideany(self, self.game.walls):
             self.kill()
-        if pg.sprite.spritecollideany(self, self.game.mobs):
+        if pg.time.get_ticks() - self.spawn_time > SETTINGS["BULLET_LIFETIME"]:
             self.kill()
+
+
+class BossBullet(pg.sprite.Sprite):
+    def __init__(self, game, pos, dir):
+        self.groups = game.all_sprites, game.bossBullets
+        pg.sprite.Sprite.__init__(self, self.groups)
+        self.game = game
+        self.image = SETTINGS["BOSS_BULLET_IMG"]
+        self.rect = self.image.get_rect()
+        self.pos = vec(pos)
+        self.rect.center = pos
+        self.vel = dir * SETTINGS["BOSS_BULLET_SPEED"]
+        self.spawn_time = pg.time.get_ticks()
+
+    def update(self):
+        self.pos += self.vel * self.game.time_delta
+        self.rect.center = self.pos
         if pg.time.get_ticks() - self.spawn_time > SETTINGS["BULLET_LIFETIME"]:
             self.kill()
 
@@ -243,6 +348,15 @@ class Boss(pg.sprite.Sprite):
         self.pos = vec(x, y)
         self.vel = vec(0, 0)
 
+        self.isAwake = False
+        self.isAngry = False
+        self.isKilling = False
+        self.reqTalks = 13
+
+        self.attackTimer = 0.0
+        self.attackSpeed = 1500.0
+        self.attackDir = 0.0
+
     def update(self):
         self.rect = self.image.get_rect()
         self.rect.center = self.pos
@@ -251,6 +365,24 @@ class Boss(pg.sprite.Sprite):
         self.hit_rect.centery = self.pos.y
         collide_with_walls(self, self.game.walls, 'y')
         self.rect.center = self.hit_rect.center
+
+        # Keep shooting bullets while awake
+        self.current_time = self.game.current_time
+        if self.current_time - self.attackTimer > self.attackSpeed:
+            if self.isAwake:
+                BossBullet(self.game, self.pos, vec(1, 0).rotate(self.attackDir))
+                BossBullet(self.game, self.pos, vec(-1, 0).rotate(self.attackDir))
+                BossBullet(self.game, self.pos, vec(0, 1).rotate(self.attackDir))
+                BossBullet(self.game, self.pos, vec(0, -1).rotate(self.attackDir))
+                if self.isAngry:
+                    BossBullet(self.game, self.pos, vec(1, 1).rotate(self.attackDir))
+                    BossBullet(self.game, self.pos, vec(-1, 1).rotate(self.attackDir))
+                    BossBullet(self.game, self.pos, vec(1, -1).rotate(self.attackDir))
+                    BossBullet(self.game, self.pos, vec(-1, -1).rotate(self.attackDir))
+                self.attackDir += 30.0
+                if self.attackDir >= 360.0:
+                    self.attackDir = 0.0
+            self.attackTimer = self.current_time
 
 
 class Obstacle(pg.sprite.Sprite):

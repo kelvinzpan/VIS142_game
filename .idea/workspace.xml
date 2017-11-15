@@ -2,70 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45ab8a0b-43e3-4f02-813c-34d96b726047" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Example/attributions.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Example/img/Impacted2.0.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Example/img/ZOMBIE.TTF" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Example/img/bullet.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Example/img/health_pack.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Example/img/light_350_hard.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Example/img/light_350_med.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Example/img/light_350_soft.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Example/img/manBlue_gun.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Example/img/obj_shotgun.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Example/img/splat green.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Example/img/splat red.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Example/img/spritesheet_tiles.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Example/img/tileGreen_39.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Example/img/whitePuff15.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Example/img/whitePuff16.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Example/img/whitePuff17.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Example/img/whitePuff18.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Example/img/zombie1_hold.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Example/main.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Example/map.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Example/map2.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Example/maps/level1.tmx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Example/maps/tiled1.tmx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Example/music/274732__tyops__suspense-ambient.ogg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Example/music/DST-RailJet-LongSeamlessLoop.ogg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Example/music/Dark Intro.ogg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Example/music/espionage.ogg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Example/settings.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Example/snd/brains2.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Example/snd/brains3.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Example/snd/gun_pickup.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Example/snd/health_pack.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Example/snd/level_start.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Example/snd/pain/10.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Example/snd/pain/11.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Example/snd/pain/12.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Example/snd/pain/13.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Example/snd/pain/14.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Example/snd/pain/8.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Example/snd/pain/9.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Example/snd/pistol.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Example/snd/sfx_weapon_singleshot2.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Example/snd/shotgun.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Example/snd/splat-15.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Example/snd/zombie-roar-1.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Example/snd/zombie-roar-2.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Example/snd/zombie-roar-3.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Example/snd/zombie-roar-4.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Example/snd/zombie-roar-5.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Example/snd/zombie-roar-6.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Example/snd/zombie-roar-7.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Example/snd/zombie-roar-8.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Example/sprites.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Example/tilemap.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Example/todo.md" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/graphics/splash1.png" afterPath="$PROJECT_DIR$/resources/graphics/splash1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/main.py" afterPath="$PROJECT_DIR$/data/main.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/prepare.py" afterPath="$PROJECT_DIR$/data/prepare.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/states/demo.py" afterPath="$PROJECT_DIR$/data/states/demo.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/states/game.py" afterPath="$PROJECT_DIR$/data/states/game.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/states/menu.py" afterPath="$PROJECT_DIR$/data/states/menu.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/states/splash.py" afterPath="$PROJECT_DIR$/data/states/splash.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -81,8 +19,8 @@
           <file leaf-file-name="prepare.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/data/prepare.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1701">
-                  <caret line="81" column="31" lean-forward="false" selection-start-line="81" selection-start-column="31" selection-end-line="81" selection-end-column="31" />
+                <state relative-caret-position="495">
+                  <caret line="193" column="58" lean-forward="true" selection-start-line="193" selection-start-column="58" selection-end-line="193" selection-end-column="58" />
                   <folding>
                     <element signature="e#84#93#0" expanded="true" />
                   </folding>
@@ -94,37 +32,13 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-          <file leaf-file-name="menu.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/data/states/menu.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="630">
-                  <caret line="30" column="47" lean-forward="false" selection-start-line="30" selection-start-column="47" selection-end-line="30" selection-end-column="47" />
-                  <folding>
-                    <element signature="e#65#84#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="demo.py" pinned="false" current-in-tab="false">
+          <file leaf-file-name="demo.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/data/states/demo.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1071">
-                  <caret line="192" column="48" lean-forward="true" selection-start-line="192" selection-start-column="48" selection-end-line="192" selection-end-column="48" />
+                <state relative-caret-position="1857">
+                  <caret line="292" column="54" lean-forward="false" selection-start-line="292" selection-start-column="54" selection-end-line="292" selection-end-column="54" />
                   <folding>
                     <element signature="e#119#138#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="game.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/data/states/game.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="336">
-                  <caret line="20" column="32" lean-forward="false" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
-                  <folding>
-                    <element signature="e#53#72#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -150,6 +64,7 @@
       <find>flip</find>
       <find>prepare.SCREEN</find>
       <find>quit</find>
+      <find>+=</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -173,10 +88,10 @@
         <option value="$PROJECT_DIR$/data/components/__init__.py" />
         <option value="$PROJECT_DIR$/data/states/splash.py" />
         <option value="$PROJECT_DIR$/data/main.py" />
-        <option value="$PROJECT_DIR$/data/prepare.py" />
-        <option value="$PROJECT_DIR$/data/states/demo.py" />
         <option value="$PROJECT_DIR$/data/states/game.py" />
         <option value="$PROJECT_DIR$/data/states/menu.py" />
+        <option value="$PROJECT_DIR$/data/states/demo.py" />
+        <option value="$PROJECT_DIR$/data/prepare.py" />
       </list>
     </option>
   </component>
@@ -293,12 +208,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.09947917" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1611479" sideWeight="0.54791665" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1611479" sideWeight="0.45208332" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1611479" sideWeight="0.45208332" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -434,7 +348,7 @@
         <state relative-caret-position="660">
           <caret line="110" column="4" lean-forward="false" selection-start-line="110" selection-start-column="4" selection-end-line="114" selection-end-column="27" />
           <folding>
-            <element signature="e#147#156#0" expanded="true" />
+            <element signature="e#147#156#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -444,16 +358,6 @@
         <state relative-caret-position="252">
           <caret line="14" column="24" lean-forward="false" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/prepare.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1701">
-          <caret line="81" column="31" lean-forward="false" selection-start-line="81" selection-start-column="31" selection-end-line="81" selection-end-column="31" />
-          <folding>
-            <element signature="e#84#93#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -470,37 +374,45 @@
         <state relative-caret-position="420">
           <caret line="20" column="41" lean-forward="true" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
           <folding>
-            <element signature="e#331#359#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/states/game.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="20" column="32" lean-forward="false" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
-          <folding>
-            <element signature="e#53#72#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/states/demo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1071">
-          <caret line="192" column="48" lean-forward="true" selection-start-line="192" selection-start-column="48" selection-end-line="192" selection-end-column="48" />
-          <folding>
-            <element signature="e#119#138#0" expanded="true" />
+            <element signature="e#331#359#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/data/states/menu.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
+        <state relative-caret-position="21">
           <caret line="30" column="47" lean-forward="false" selection-start-line="30" selection-start-column="47" selection-end-line="30" selection-end-column="47" />
           <folding>
-            <element signature="e#65#84#0" expanded="true" />
+            <element signature="e#65#84#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/states/game.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="453">
+          <caret line="72" column="53" lean-forward="true" selection-start-line="72" selection-start-column="53" selection-end-line="72" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/states/demo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1857">
+          <caret line="292" column="54" lean-forward="false" selection-start-line="292" selection-start-column="54" selection-end-line="292" selection-end-column="54" />
+          <folding>
+            <element signature="e#119#138#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/prepare.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="193" column="58" lean-forward="true" selection-start-line="193" selection-start-column="58" selection-end-line="193" selection-end-column="58" />
+          <folding>
+            <element signature="e#84#93#0" expanded="true" />
           </folding>
         </state>
       </provider>
